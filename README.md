@@ -107,3 +107,12 @@ Commercial use, SaaS use, resale, paid hosting, white-label distribution, or int
 This public repository intentionally excludes private crawl data, cookies, local databases, task history, output files, and real collected media.
 
 这个公开仓库不会包含真实采集数据、Cookie、本地数据库、任务历史、输出文件或真实媒体资料。
+
+## Other things :green_heart: :green_heart: :green_heart: 
+
+Support AG7.
+
+支持我炸。
+<p align="center">
+  <img src="docs/assets/1.png" alt="ag7" width="960" />
+</p>
