@@ -1,0 +1,66 @@
+<svg width="1120" height="520" viewBox="0 0 1120 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Qingye X Console Architecture</title>
+  <desc id="desc">Architecture diagram showing Vue console, Flask API, task engine, crawler, and local storage.</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1120" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBF2"/>
+      <stop offset="1" stop-color="#E8F6EA"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EEF8EF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="80" x2="1000" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#245C39"/>
+      <stop offset="1" stop-color="#52B878"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0D2A17" flood-opacity="0.11"/>
+    </filter>
+  </defs>
+  <rect width="1120" height="520" rx="34" fill="url(#canvas)"/>
+  <path d="M157 257H307" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M443 257H590" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M737 257H885" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M300 257L284 247V267L300 257Z" fill="#378D55"/>
+  <path d="M590 257L574 247V267L590 257Z" fill="#378D55"/>
+  <path d="M884 257L868 247V267L884 257Z" fill="#378D55"/>
+  <g filter="url(#soft)">
+    <rect x="64" y="150" width="188" height="214" rx="26" fill="url(#card)" stroke="#D7EAD8"/>
+    <circle cx="100" cy="196" r="18" fill="#DDF6D7"/>
+    <text x="132" y="202" fill="#14351F" font-family="Avenir Next, Segoe UI, sans-serif" font-size="20" font-weight="800">Vue Console</text>
+    <text x="94" y="246" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Dashboard</text>
+    <text x="94" y="278" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Timeline</text>
+    <text x="94" y="310" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Media Library</text>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="312" y="150" width="188" height="214" rx="26" fill="url(#card)" stroke="#D7EAD8"/>
+    <circle cx="348" cy="196" r="18" fill="#DDF6D7"/>
+    <text x="380" y="202" fill="#14351F" font-family="Avenir Next, Segoe UI, sans-serif" font-size="20" font-weight="800">Flask API</text>
+    <text x="342" y="246" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Auth</text>
+    <text x="342" y="278" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Socket.IO</text>
+    <text x="342" y="310" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Admin Routes</text>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="600" y="150" width="188" height="214" rx="26" fill="url(#card)" stroke="#D7EAD8"/>
+    <circle cx="636" cy="196" r="18" fill="#DDF6D7"/>
+    <text x="668" y="202" fill="#14351F" font-family="Avenir Next, Segoe UI, sans-serif" font-size="20" font-weight="800">Task Engine</text>
+    <text x="630" y="246" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Queue</text>
+    <text x="630" y="278" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Retry / Pause</text>
+    <text x="630" y="310" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Artifacts</text>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="868" y="92" width="188" height="154" rx="26" fill="url(#card)" stroke="#D7EAD8"/>
+    <text x="900" y="150" fill="#14351F" font-family="Avenir Next, Segoe UI, sans-serif" font-size="20" font-weight="800">Crawler</text>
+    <text x="900" y="190" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">Selenium / API</text>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="868" y="274" width="188" height="154" rx="26" fill="url(#card)" stroke="#D7EAD8"/>
+    <text x="900" y="332" fill="#14351F" font-family="Avenir Next, Segoe UI, sans-serif" font-size="20" font-weight="800">Local Store</text>
+    <text x="900" y="372" fill="#4D6654" font-family="Avenir Next, Segoe UI, sans-serif" font-size="15">SQLite + JSON</text>
+  </g>
+  <path d="M788 230C823 207 838 182 868 169" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M788 284C823 308 838 334 868 352" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <text x="64" y="68" fill="#102D19" font-family="Avenir Next, Segoe UI, sans-serif" font-size="30" font-weight="900">Local-first collection pipeline</text>
+  <text x="64" y="104" fill="#536B58" font-family="Avenir Next, Segoe UI, sans-serif" font-size="17">Browser UI, task orchestration, crawling, media downloads, and local archives stay under your control.</text>
+</svg>

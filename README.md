@@ -1,109 +1,76 @@
-# Qingye X Console
+<p align="center">
+  <img src="docs/assets/qingye-logo.svg" alt="Qingye X Console" width="860" />
+</p>
 
-Qingye X Console is a local-first web console for collecting, managing, and reviewing X/Twitter account timelines, media, crawl tasks, and local archives.
+<p align="center">
+  <a href="./README.en.md">English</a>
+  ·
+  <a href="./README.zh-CN.md">简体中文</a>
+</p>
 
-It combines a Vue 3 admin interface with a Flask backend, Selenium-based crawling, task orchestration, media downloads, and SQLite-based local storage.
+<p align="center">
+  <img alt="Source Available" src="https://img.shields.io/badge/license-source--available-245C39?style=for-the-badge" />
+  <img alt="Vue 3" src="https://img.shields.io/badge/Vue-3-42b883?style=for-the-badge&logo=vuedotjs&logoColor=white" />
+  <img alt="Flask" src="https://img.shields.io/badge/Flask-API-111827?style=for-the-badge&logo=flask&logoColor=white" />
+  <img alt="Selenium" src="https://img.shields.io/badge/Selenium-Crawler-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
+</p>
 
-> This repository is prepared for public source release. It does not include private crawl data, cookies, local databases, output files, or environment secrets.
+<p align="center">
+  <strong>Local-first X/Twitter collection console for crawl tasks, user timelines, media archives, and review workflows.</strong>
+</p>
 
-## Highlights
+<p align="center">
+  <strong>本地优先的 X/Twitter 采集控制台：管理爬取任务、用户时间流、媒体资料库与内容复核流程。</strong>
+</p>
 
-- Create focused crawl tasks for X/Twitter accounts.
-- Track running, paused, completed, failed, and cancelled tasks.
-- Browse collected accounts in a user timeline sorted by latest collection time.
-- Open standalone timeline, post detail, and video playback pages.
-- Review local videos, photos, post text, screenshots, logs, and task artifacts.
-- Manage user display names and hide/restored accounts from the timeline directory.
-- Configure runtime settings and Twitter Bearer Token from the admin console.
-- Use Chinese or English UI language from Settings.
-- Run locally with Python, Flask, Vue 3, Ant Design Vue, and optional Docker.
+<p align="center">
+  <img src="docs/assets/qingye-console-ai-hero.png" alt="Qingye X Console AI generated hero banner" width="960" />
+</p>
 
-## Tech Stack
+## Overview
 
-- Backend: Python, Flask, Flask-SocketIO
-- Crawling: Selenium, optional Tweepy API mode
-- Frontend: Vue 3, Vue Router, Pinia-style store structure, Ant Design Vue, Vite
-- Storage: local JSON state plus SQLite media shard databases
-- Runtime: local macOS development first, Docker deployment supported
+Qingye X Console combines a Vue 3 admin interface with a Flask backend, Selenium-based crawling, task orchestration, local media downloads, and SQLite/JSON storage.
 
-## Repository Structure
+青野 X Console 将 Vue 3 后台界面、Flask 后端、Selenium 采集、任务队列、本地媒体下载与 SQLite/JSON 存储整合在一起，适合本地化管理账号内容与媒体资料。
 
-```text
-.
-├── app.py                    # Flask application entry point
-├── core/                     # auth, runtime, config
-├── routes/                   # Flask routes and API endpoints
-├── services/                 # media store, downloader, timeline, artifacts
-├── scrapers/                 # Selenium and API scrapers
-├── tasks/                    # task models, persistence, control, execution
-├── frontend/                 # Vue 3 source code
-├── static/                   # legacy/static assets served by Flask
-├── templates/                # fallback templates
-├── tools/                    # local helper scripts
-├── data/                     # runtime data directory, ignored by git
-└── output/                   # generated crawl output, ignored by git
-```
+## Why It Exists
 
-## What Is Not Included
+- Keep crawl data, cookies, task history, and media files under local control.
+- Create and monitor focused crawl tasks instead of running one-off scripts.
+- Browse collected accounts by latest collection time.
+- Review posts, images, and videos in a standalone timeline experience.
+- Keep commercial rights protected through a source-available license.
 
-The GitHub release folder intentionally excludes:
+- 采集数据、Cookie、任务历史和媒体文件默认留在本机。
+- 用后台任务流管理采集，而不是散落的脚本。
+- 用户时间流按最近采集时间排序，方便继续查看最新账号。
+- 贴文、图片、视频都有独立浏览体验。
+- 采用 source-available 授权，保留商业授权权利。
 
-- `.env`
-- `twitter_cookies.json` or `cookies/twitter_cookies.json`
-- `frontend/node_modules/`
-- `__pycache__/`
-- local `data/` contents
-- local `output/` and `oldoutput/`
-- generated frontend build assets under `static/vue/assets/`
-- real collected media, screenshots, and databases
+## Visual Architecture
 
-## Requirements
-
-- Python 3.10+
-- Node.js 18+
-- Chrome or Chromium
-- ChromeDriver compatible with your browser
-- Optional: Docker and Docker Compose
+<p align="center">
+  <img src="docs/assets/qingye-architecture.svg" alt="Qingye X Console architecture" width="960" />
+</p>
 
 ## Quick Start
-
-1. Create a virtual environment:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
-
-2. Install Python dependencies:
-
-```bash
 pip install -r requirements.txt
-```
 
-3. Configure environment variables:
-
-```bash
 cp .env.example .env
-```
 
-Edit `.env` and set the values you need.
-
-4. Install and build the frontend:
-
-```bash
 cd frontend
 npm install
 npm run build
 cd ..
-```
 
-5. Start the local app:
-
-```bash
 python3 app.py
 ```
 
-6. Open the console:
+Open:
 
 ```text
 http://localhost:5001
@@ -118,100 +85,25 @@ password: admin123
 
 Change the password after first login.
 
-## Docker
+## Documentation
 
-Copy the environment file first:
-
-```bash
-cp .env.example .env
-```
-
-Build the frontend before running Docker:
-
-```bash
-cd frontend
-npm install
-npm run build
-cd ..
-```
-
-Then start the service:
-
-```bash
-docker compose up --build
-```
-
-## Environment Variables
-
-See [.env.example](./.env.example).
-
-Common values:
-
-- `PORT`: Flask port, default `5001`
-- `SECRET_KEY`: Flask session secret
-- `TWITTER_BEARER_TOKEN`: optional X/Twitter API Bearer Token
-- `TWITTER_USERNAME`: optional account username for Selenium login flow
-- `TWITTER_PASSWORD`: optional account password for Selenium login flow
-- `SELENIUM_HEADLESS`: run Selenium in headless mode
-- `SELENIUM_MANUAL_LOGIN`: allow manual browser login flow
-
-Do not commit `.env`, cookies, local databases, or collected media.
-
-## Language
-
-The admin console supports Simplified Chinese and English. Open:
-
-```text
-Settings -> Language & Display
-```
-
-Then choose the UI language. The selection is saved in browser local storage.
-
-## Data And Privacy
-
-This application is designed for local operation. Crawl outputs, cookies, task history, local media, screenshots, and SQLite files may contain sensitive or copyrighted information.
-
-Before publishing, sharing, or deploying this repository:
-
-- Review `.gitignore`.
-- Keep `.env` private.
-- Keep `twitter_cookies.json` or `cookies/twitter_cookies.json` private.
-- Do not commit `data/`, `output/`, `oldoutput/`, or local media shards.
-- Ensure your usage complies with X/Twitter terms, local laws, and any applicable platform rules.
+- [English README](./README.en.md)
+- [中文说明文档](./README.zh-CN.md)
+- [Commercial License Notes](./COMMERCIAL_LICENSE.md)
+- [License](./LICENSE)
 
 ## Commercial Licensing
 
-This project is **source-available**, not open-source under MIT/Apache/GPL.
+This project is **source-available**, not MIT/Apache/GPL open source.
 
-Commercial use, SaaS use, resale, paid hosting, white-label distribution, or integration into a paid product requires a separate written commercial license from the copyright owner.
+Commercial use, SaaS use, resale, paid hosting, white-label distribution, or integration into paid products requires a separate written commercial license.
 
-See [LICENSE](./LICENSE) and [COMMERCIAL_LICENSE.md](./COMMERCIAL_LICENSE.md).
+本项目是 **source-available**，不是 MIT/Apache/GPL 开源授权。
 
-## Development Notes
+商业使用、SaaS、转售、付费托管、白标分发或集成进付费产品，都需要获得单独的书面商业授权。
 
-Frontend source lives in `frontend/`. After frontend changes, run:
+## Privacy Notice
 
-```bash
-cd frontend
-npm run build
-```
+This public repository intentionally excludes private crawl data, cookies, local databases, task history, output files, and real collected media.
 
-The build output is written to `static/vue/`, which Flask serves as the single-page app.
-
-Backend source lives in `core/`, `routes/`, `services/`, `scrapers/`, and `tasks/`.
-
-## Publish Checklist
-
-Before pushing to GitHub:
-
-- Replace copyright owner placeholders in `LICENSE` and `COMMERCIAL_LICENSE.md`.
-- Confirm `.env` does not exist in the repo.
-- Confirm `twitter_cookies.json` and real files under `cookies/` do not exist in the repo.
-- Confirm `data/`, `output/`, `oldoutput/`, and `frontend/node_modules/` are not tracked.
-- Run `npm run build` in `frontend/`.
-- Start the app locally and check the browser console.
-- Add screenshots or product images only if they do not expose private accounts or collected content.
-
-## Disclaimer
-
-This software is provided without warranty. You are responsible for how you configure and use it, including compliance with platform terms, copyright, privacy, and data protection requirements.
+这个公开仓库不会包含真实采集数据、Cookie、本地数据库、任务历史、输出文件或真实媒体资料。

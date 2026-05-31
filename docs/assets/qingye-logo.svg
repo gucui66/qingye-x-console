@@ -1,0 +1,45 @@
+<svg width="960" height="240" viewBox="0 0 960 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Qingye X Console Logo</title>
+  <desc id="desc">A green local-first console logo with leaf, timeline, and media motifs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#092217"/>
+      <stop offset="0.52" stop-color="#123827"/>
+      <stop offset="1" stop-color="#EAF8E7"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="84" y1="42" x2="194" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BDF7A3"/>
+      <stop offset="1" stop-color="#42B86B"/>
+    </linearGradient>
+    <linearGradient id="line" x1="98" y1="66" x2="206" y2="178" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7FFF1"/>
+      <stop offset="1" stop-color="#7CE4B0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#02140D" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <rect width="960" height="240" rx="36" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="42" y="38" width="176" height="164" rx="34" fill="#F8FFF4" fill-opacity="0.12" stroke="#D9FFD0" stroke-opacity="0.28"/>
+    <path d="M129.6 55.5C158.6 73.6 188.5 104.8 192.5 140.1C197.1 181.4 159.2 203.9 121.8 190.1C83.9 176.1 61.9 137.7 73.6 101.6C82.1 75.5 103.9 59.5 129.6 55.5Z" fill="url(#leaf)"/>
+    <path d="M94 156C125 143 151 113 169 79" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="98" cy="156" r="8" fill="#F8FFF4"/>
+    <circle cx="129" cy="134" r="7" fill="#F8FFF4"/>
+    <circle cx="153" cy="106" r="7" fill="#F8FFF4"/>
+  </g>
+  <g>
+    <text x="252" y="104" fill="#F7FFF1" font-family="Avenir Next, Manrope, Segoe UI, sans-serif" font-size="48" font-weight="800" letter-spacing="-1.2">Qingye X Console</text>
+    <text x="254" y="146" fill="#C7E6D1" font-family="Avenir Next, Manrope, Segoe UI, sans-serif" font-size="20" font-weight="500">Local-first timeline, task, and media intelligence for X/Twitter collection workflows</text>
+    <g transform="translate(254 170)">
+      <rect width="108" height="30" rx="15" fill="#EAF8E7" fill-opacity="0.16"/>
+      <text x="18" y="21" fill="#EAF8E7" font-family="Avenir Next, Manrope, Segoe UI, sans-serif" font-size="13" font-weight="700">Vue 3</text>
+      <rect x="122" width="106" height="30" rx="15" fill="#EAF8E7" fill-opacity="0.16"/>
+      <text x="140" y="21" fill="#EAF8E7" font-family="Avenir Next, Manrope, Segoe UI, sans-serif" font-size="13" font-weight="700">Flask</text>
+      <rect x="242" width="118" height="30" rx="15" fill="#EAF8E7" fill-opacity="0.16"/>
+      <text x="260" y="21" fill="#EAF8E7" font-family="Avenir Next, Manrope, Segoe UI, sans-serif" font-size="13" font-weight="700">Selenium</text>
+      <rect x="374" width="154" height="30" rx="15" fill="#EAF8E7" fill-opacity="0.16"/>
+      <text x="392" y="21" fill="#EAF8E7" font-family="Avenir Next, Manrope, Segoe UI, sans-serif" font-size="13" font-weight="700">Source-Available</text>
+    </g>
+  </g>
+</svg>
