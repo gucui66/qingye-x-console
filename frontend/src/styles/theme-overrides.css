@@ -1,0 +1,316 @@
+/* X 官方感主题覆盖：白底、黑字、草绿动作色。放在全局样式之后，统一压住旧的分散色值。 */
+.app-shell,
+.app-shell .ant-layout,
+.app-shell .ant-layout-content {
+  background: transparent !important;
+  color: var(--x-text);
+}
+
+.ant-layout-sider.app-sider {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-right: 1px solid var(--x-border);
+  box-shadow: 8px 0 28px rgba(17, 17, 17, 0.035);
+}
+
+.brand-logo {
+  border-radius: 999px;
+  background: #111111 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 26px rgba(17, 17, 17, 0.16);
+  letter-spacing: -0.04em;
+}
+
+.brand-title,
+.header-page-title,
+.metric-value,
+.dashboard-hero-copy h2,
+.home-hero-copy h1,
+.task-group-user,
+.task-card-user,
+.home-quick-card strong,
+.quick-action-card strong,
+.focus-task-user,
+.panel-title,
+.detail-task-id,
+.db-primary-text,
+.library-file-name,
+.search-primary-link {
+  color: var(--x-text) !important;
+}
+
+.brand-subtitle,
+.header-page-subtitle,
+.metric-label,
+.metric-foot,
+.dashboard-hero-copy p,
+.home-hero-copy p,
+.table-sub-note,
+.task-card-meta,
+.task-card-time,
+.task-card-status-line,
+.preview-subtitle,
+.db-secondary-text,
+.sider-footer-label,
+.sider-footer-line,
+.header-focus-chip-label {
+  color: var(--x-text-muted) !important;
+}
+
+.app-menu {
+  padding: 10px 12px 0;
+}
+
+.app-menu .ant-menu-item {
+  min-height: 44px;
+  margin-block: 4px;
+  border-radius: 999px;
+  color: var(--x-text-muted);
+  font-weight: 650;
+}
+
+.app-menu .ant-menu-item:hover,
+.app-menu .ant-menu-item-active {
+  background: #f2f7f2 !important;
+  color: var(--x-text) !important;
+}
+
+.app-menu .ant-menu-item-selected {
+  background: var(--x-surface-green) !important;
+  color: var(--x-text) !important;
+  box-shadow: inset 3px 0 0 var(--x-green);
+}
+
+.app-menu .ant-menu-item-selected .anticon {
+  color: var(--x-green) !important;
+}
+
+.sider-footer-card,
+.focus-task-box,
+.screenshot-card,
+.tasks-summary-pill,
+.dashboard-hero-stat,
+.home-hero-panel,
+.detail-identity-card,
+.detail-task-id,
+.dashboard-log-item,
+.task-stat-item,
+.tasks-batch-bar {
+  background: var(--x-surface-soft) !important;
+  border: 1px solid var(--x-border-soft) !important;
+  box-shadow: none !important;
+}
+
+.app-header {
+  border-bottom: 1px solid var(--x-border);
+  background: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 14px 36px rgba(17, 17, 17, 0.045);
+}
+
+.panel-card,
+.metric-card,
+.ant-card,
+.task-group-card,
+.task-card,
+.quick-action-card,
+.home-quick-card,
+.dashboard-hero,
+.home-hero-card,
+.task-create-card {
+  border: 1px solid var(--x-border) !important;
+  background: var(--x-surface) !important;
+  box-shadow: var(--x-shadow) !important;
+}
+
+.task-card:hover,
+.quick-action-card:hover,
+.home-quick-card:hover {
+  border-color: #b9dcbc !important;
+  box-shadow: var(--x-shadow-hover) !important;
+}
+
+.dashboard-hero,
+.home-hero-card,
+.task-create-card,
+.metric-green {
+  background:
+    radial-gradient(circle at top right, rgba(22, 163, 74, 0.08), transparent 34%),
+    #ffffff !important;
+}
+
+.ant-btn-primary {
+  background: #111111 !important;
+  border-color: #111111 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.12);
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: var(--x-green) !important;
+  border-color: var(--x-green) !important;
+}
+
+.ant-btn:not(.ant-btn-primary):not(.ant-btn-link) {
+  border-color: var(--x-border) !important;
+  color: var(--x-text) !important;
+  background: #ffffff !important;
+}
+
+.ant-btn:not(.ant-btn-primary):not(.ant-btn-link):hover {
+  border-color: var(--x-green) !important;
+  color: var(--x-green-deep) !important;
+  background: #f5fbf5 !important;
+}
+
+.ant-btn-link {
+  color: #111111 !important;
+  font-weight: 650;
+}
+
+.ant-btn-link:hover {
+  color: var(--x-green) !important;
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-input-number,
+.ant-picker,
+.ant-textarea {
+  border-color: var(--x-border) !important;
+  background: #ffffff !important;
+}
+
+.ant-input:focus,
+.ant-input-focused,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+  border-color: var(--x-green) !important;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12) !important;
+}
+
+.ant-table-wrapper .ant-table {
+  color: var(--x-text);
+  background: #ffffff;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  background: #f8fbf8 !important;
+  color: var(--x-text) !important;
+  border-bottom-color: var(--x-border) !important;
+  font-weight: 750;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  border-bottom-color: var(--x-border-soft) !important;
+}
+
+.interactive-table .ant-table-tbody > tr:hover > td,
+.ant-table-wrapper .ant-table-tbody > tr.ant-table-row:hover > td {
+  background: #f1f8f2 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #111111 !important;
+  font-weight: 750;
+}
+
+.ant-tabs-ink-bar {
+  background: var(--x-green) !important;
+}
+
+.ant-tag {
+  border-radius: 999px;
+  font-weight: 650;
+}
+
+.ant-tag-blue,
+.ant-tag-processing {
+  color: #111111 !important;
+  background: #eef7ef !important;
+  border-color: #cfe6d2 !important;
+}
+
+.ant-tag-green,
+.ant-tag-success {
+  color: var(--x-green-deep) !important;
+  background: var(--x-green-soft) !important;
+  border-color: #bbf7d0 !important;
+}
+
+.ant-progress .ant-progress-bg {
+  background: linear-gradient(90deg, #111111, var(--x-green)) !important;
+}
+
+.library-video-player,
+.x-video-player,
+.standalone-video-player,
+.post-video-player {
+  background: #050505 !important;
+  border: 1px solid #111111 !important;
+}
+
+.feed-inline-avatar,
+.x-avatar,
+.x-user-avatar,
+.x-post-avatar {
+  background: #111111 !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(17, 17, 17, 0.16) !important;
+}
+
+.x-standalone-topbar,
+.x-profile-card,
+.x-feed-card,
+.x-post-card,
+.x-video-card,
+.x-sidebar-card,
+.x-tweet-card,
+.x-user-card,
+.x-compose-card {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: var(--x-border) !important;
+  box-shadow: var(--x-shadow) !important;
+}
+
+.x-standalone-topbar-main,
+.x-standalone-userbar {
+  border-color: var(--x-border-soft) !important;
+}
+
+.x-standalone-userbar-title,
+.x-feed-title,
+.x-post-title,
+.x-video-title,
+.x-tweet-content,
+.x-user-name {
+  color: var(--x-text) !important;
+}
+
+.x-standalone-userbar-subtitle,
+.x-feed-subtitle,
+.x-post-meta,
+.x-video-meta,
+.x-tweet-meta,
+.x-user-handle {
+  color: var(--x-text-muted) !important;
+}
+
+.x-tab-button,
+.x-pill-button {
+  border-radius: 999px !important;
+}
+
+.x-tab-button.active,
+.x-pill-button.active,
+.task-card-selected,
+.library-selected-row td {
+  background: var(--x-surface-green) !important;
+  box-shadow: inset 3px 0 0 var(--x-green) !important;
+}
+
+.code-block {
+  background: #111111 !important;
+  color: #dcfce7 !important;
+}

@@ -1,0 +1,36 @@
+# Qingye X Console Source-Available License
+
+Copyright (c) 2026 5an
+
+All rights reserved.
+
+This repository and all files contained in it, including source code, documentation,
+design assets, configuration files, and build scripts, are provided for review,
+evaluation, and personal non-commercial use only.
+
+You may:
+
+1. View and study the source code.
+2. Run the software locally for personal, non-commercial evaluation.
+3. Modify the software for personal, non-commercial evaluation.
+
+You may not, without prior written permission from the copyright owner:
+
+1. Use the software for commercial purposes.
+2. Sell, sublicense, rent, host, or provide the software as a paid service.
+3. Use the software in a SaaS product, hosted platform, agency workflow, or paid client project.
+4. Distribute modified or unmodified copies for commercial purposes.
+5. Remove or alter copyright, license, or attribution notices.
+6. Claim ownership of this software or any substantial part of it.
+
+Commercial use requires a separate written commercial license agreement.
+See COMMERCIAL_LICENSE.md for the intended commercial licensing process.
+
+Third-party dependencies remain governed by their own licenses.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, SECURITY, NON-INFRINGEMENT, OR AVAILABILITY.
+IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY CLAIM, DAMAGES, DATA
+LOSS, BUSINESS INTERRUPTION, OR OTHER LIABILITY ARISING FROM OR RELATED TO THE
+SOFTWARE OR ITS USE.

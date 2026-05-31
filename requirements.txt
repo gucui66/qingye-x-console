@@ -1,0 +1,20 @@
+# X/Twitter 爬虫依赖包
+
+# HTTP请求
+requests>=2.31.0
+
+# Web框架
+Flask>=3.0.0
+flask-socketio>=5.3.0
+python-socketio>=5.10.0
+
+# 爬取方式1：Twitter官方API（需要API密钥，速度快）
+tweepy>=4.14.0
+
+# 爬取方式2：浏览器模拟（无需API，较慢，需安装Chrome）
+selenium>=4.15.0
+webdriver-manager>=4.0.1
+
+# 视频下载工具
+yt-dlp>=2023.11.16
+

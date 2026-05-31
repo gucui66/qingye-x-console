@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+data/*
+!data/.gitkeep
+output/*
+!output/.gitkeep
+oldoutput/
+static/vue/*
+!static/vue/.gitkeep
+static/screenshots/
+twitter_cookies.json
+twitter_cookies_template.json
+cookies/*
+!cookies/.gitkeep
+*.log
+tasks.json
+app.log
+media_username_summary_cache.json
+user_feed_summary_cache.json
+user_directory.json
+history.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+!frontend/src/lib/
+!frontend/src/lib/**
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Docker
+个人使用版本.tar.gz
+GitHub发布版本.tar.gz
+*.zip
+
+# Temporary files
+*.tmp
+*.temp

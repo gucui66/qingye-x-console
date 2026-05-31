@@ -1,0 +1,36 @@
+services:
+  twitter-scraper:
+    build: .
+    container_name: twitter-scraper-macos
+    ports:
+      - "${PORT:-5001}:${PORT:-5001}"
+    volumes:
+      # Source code mounts for local development.
+      - ./app.py:/app/app.py
+      - ./core:/app/core
+      - ./routes:/app/routes
+      - ./scrapers:/app/scrapers
+      - ./services:/app/services
+      - ./tasks:/app/tasks
+      - ./tools:/app/tools
+      - ./task_manager.py:/app/task_manager.py
+      # Keep private cookies outside git-tracked source files.
+      - ./cookies:/app/cookies
+      # Static assets, including frontend build output.
+      - ./static:/app/static
+      # Persist downloaded files.
+      - ./output:/app/output
+      # Persist tasks, history, admin account, and media shards.
+      - ./data:/app/data
+    environment:
+      - PORT=${PORT:-5001}
+      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN:-}
+      - TWITTER_USERNAME=${TWITTER_USERNAME:-}
+      - TWITTER_PASSWORD=${TWITTER_PASSWORD:-}
+      - SELENIUM_HEADLESS=${SELENIUM_HEADLESS:-true}
+      - SELENIUM_MANUAL_LOGIN=${SELENIUM_MANUAL_LOGIN:-false}
+      - SECRET_KEY=${SECRET_KEY:-twitter-scraper-local-dev-key}
+      - COOKIE_FILE=/app/cookies/twitter_cookies.json
+    restart: unless-stopped
+    # Prevent Chrome crashes during Selenium sessions.
+    shm_size: '2gb'

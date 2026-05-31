@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Runtime data
+data/
+output/
+oldoutput/
+static/screenshots/
+twitter_cookies.json
+.env
+.env.local
+*.log
+tasks.json
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Mac
+.DS_Store
+
+# Docker / frontend build cache
+frontend/node_modules/
+frontend/.vite/
+
+# Documentation
+*.md
+
+# Other
+*.tar.gz
+*.zip
